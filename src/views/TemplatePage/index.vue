@@ -1,5 +1,7 @@
 <template>
-    <div>您好！</div>
+    <div>
+        <h1>前端框架模版</h1>
+    </div>
 
 </template>
 
