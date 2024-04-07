@@ -2,7 +2,6 @@ import axios from "axios";
 import nprogress from 'nprogress';
 import "nprogress/nprogress.css";
 
-// 注：第一个页面里面两个上传文件的部分也有baseUrl，如果要改的话，一起改
 export const baseUrl = '/api'
 // export const baseUrl = 'http://47.94.142.244:8080'
 
@@ -29,10 +28,10 @@ export const postForm = (requestUrl, params, This, callback) => {
     .catch((err) => {
         nprogress.done()
         console.log('postForm 的 error: ', requestUrl, err);
-        // This.$message({
-        //     message: '网络错误',
-        //     type: 'error'
-        // });
+        This.$message({
+            message: '网络错误',
+            type: 'error'
+        });
     })
 }
 
